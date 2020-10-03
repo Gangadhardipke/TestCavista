@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F484C025293F3A002E05BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484BF25293F3A002E05BA /* AppDelegate.swift */; };
+		84F484C225293F3A002E05BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484C125293F3A002E05BA /* SceneDelegate.swift */; };
+		84F484C425293F3A002E05BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484C325293F3A002E05BA /* ViewController.swift */; };
+		84F484C725293F3A002E05BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F484C525293F3A002E05BA /* Main.storyboard */; };
+		84F484C925293F3B002E05BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F484C825293F3B002E05BA /* Assets.xcassets */; };
+		84F484CC25293F3B002E05BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F484CA25293F3B002E05BA /* LaunchScreen.storyboard */; };
+		84F484D725293F3B002E05BA /* CavistaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484D625293F3B002E05BA /* CavistaTests.swift */; };
+		84F484E225293F3B002E05BA /* CavistaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484E125293F3B002E05BA /* CavistaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F484D325293F3B002E05BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F484B425293F3A002E05BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F484BB25293F3A002E05BA;
+			remoteInfo = Cavista;
+		};
+		84F484DE25293F3B002E05BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F484B425293F3A002E05BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F484BB25293F3A002E05BA;
+			remoteInfo = Cavista;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84F484BC25293F3A002E05BA /* Cavista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cavista.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F484BF25293F3A002E05BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F484C125293F3A002E05BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84F484C325293F3A002E05BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84F484C625293F3A002E05BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F484C825293F3B002E05BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F484CB25293F3B002E05BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F484CD25293F3B002E05BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F484D225293F3B002E05BA /* CavistaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CavistaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F484D625293F3B002E05BA /* CavistaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaTests.swift; sourceTree = "<group>"; };
+		84F484D825293F3B002E05BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F484DD25293F3B002E05BA /* CavistaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CavistaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F484E125293F3B002E05BA /* CavistaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaUITests.swift; sourceTree = "<group>"; };
+		84F484E325293F3B002E05BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F484B925293F3A002E05BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484CF25293F3B002E05BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484DA25293F3B002E05BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84F484B325293F3A002E05BA = {
+			isa = PBXGroup;
+			children = (
+				84F484BE25293F3A002E05BA /* Cavista */,
+				84F484D525293F3B002E05BA /* CavistaTests */,
+				84F484E025293F3B002E05BA /* CavistaUITests */,
+				84F484BD25293F3A002E05BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84F484BD25293F3A002E05BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F484BC25293F3A002E05BA /* Cavista.app */,
+				84F484D225293F3B002E05BA /* CavistaTests.xctest */,
+				84F484DD25293F3B002E05BA /* CavistaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F484BE25293F3A002E05BA /* Cavista */ = {
+			isa = PBXGroup;
+			children = (
+				84F484BF25293F3A002E05BA /* AppDelegate.swift */,
+				84F484C125293F3A002E05BA /* SceneDelegate.swift */,
+				84F484C325293F3A002E05BA /* ViewController.swift */,
+				84F484C525293F3A002E05BA /* Main.storyboard */,
+				84F484C825293F3B002E05BA /* Assets.xcassets */,
+				84F484CA25293F3B002E05BA /* LaunchScreen.storyboard */,
+				84F484CD25293F3B002E05BA /* Info.plist */,
+			);
+			path = Cavista;
+			sourceTree = "<group>";
+		};
+		84F484D525293F3B002E05BA /* CavistaTests */ = {
+			isa = PBXGroup;
+			children = (
+				84F484D625293F3B002E05BA /* CavistaTests.swift */,
+				84F484D825293F3B002E05BA /* Info.plist */,
+			);
+			path = CavistaTests;
+			sourceTree = "<group>";
+		};
+		84F484E025293F3B002E05BA /* CavistaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84F484E125293F3B002E05BA /* CavistaUITests.swift */,
+				84F484E325293F3B002E05BA /* Info.plist */,
+			);
+			path = CavistaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F484BB25293F3A002E05BA /* Cavista */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F484E625293F3B002E05BA /* Build configuration list for PBXNativeTarget "Cavista" */;
+			buildPhases = (
+				84F484B825293F3A002E05BA /* Sources */,
+				84F484B925293F3A002E05BA /* Frameworks */,
+				84F484BA25293F3A002E05BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cavista;
+			productName = Cavista;
+			productReference = 84F484BC25293F3A002E05BA /* Cavista.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F484D125293F3B002E05BA /* CavistaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F484E925293F3B002E05BA /* Build configuration list for PBXNativeTarget "CavistaTests" */;
+			buildPhases = (
+				84F484CE25293F3B002E05BA /* Sources */,
+				84F484CF25293F3B002E05BA /* Frameworks */,
+				84F484D025293F3B002E05BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F484D425293F3B002E05BA /* PBXTargetDependency */,
+			);
+			name = CavistaTests;
+			productName = CavistaTests;
+			productReference = 84F484D225293F3B002E05BA /* CavistaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84F484DC25293F3B002E05BA /* CavistaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F484EC25293F3B002E05BA /* Build configuration list for PBXNativeTarget "CavistaUITests" */;
+			buildPhases = (
+				84F484D925293F3B002E05BA /* Sources */,
+				84F484DA25293F3B002E05BA /* Frameworks */,
+				84F484DB25293F3B002E05BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F484DF25293F3B002E05BA /* PBXTargetDependency */,
+			);
+			name = CavistaUITests;
+			productName = CavistaUITests;
+			productReference = 84F484DD25293F3B002E05BA /* CavistaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F484B425293F3A002E05BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					84F484BB25293F3A002E05BA = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					84F484D125293F3B002E05BA = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 84F484BB25293F3A002E05BA;
+					};
+					84F484DC25293F3B002E05BA = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 84F484BB25293F3A002E05BA;
+					};
+				};
+			};
+			buildConfigurationList = 84F484B725293F3A002E05BA /* Build configuration list for PBXProject "Cavista" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F484B325293F3A002E05BA;
+			productRefGroup = 84F484BD25293F3A002E05BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F484BB25293F3A002E05BA /* Cavista */,
+				84F484D125293F3B002E05BA /* CavistaTests */,
+				84F484DC25293F3B002E05BA /* CavistaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F484BA25293F3A002E05BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F484CC25293F3B002E05BA /* LaunchScreen.storyboard in Resources */,
+				84F484C925293F3B002E05BA /* Assets.xcassets in Resources */,
+				84F484C725293F3A002E05BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484D025293F3B002E05BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484DB25293F3B002E05BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F484B825293F3A002E05BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F484C425293F3A002E05BA /* ViewController.swift in Sources */,
+				84F484C025293F3A002E05BA /* AppDelegate.swift in Sources */,
+				84F484C225293F3A002E05BA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484CE25293F3B002E05BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F484D725293F3B002E05BA /* CavistaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F484D925293F3B002E05BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F484E225293F3B002E05BA /* CavistaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F484D425293F3B002E05BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F484BB25293F3A002E05BA /* Cavista */;
+			targetProxy = 84F484D325293F3B002E05BA /* PBXContainerItemProxy */;
+		};
+		84F484DF25293F3B002E05BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F484BB25293F3A002E05BA /* Cavista */;
+			targetProxy = 84F484DE25293F3B002E05BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84F484C525293F3A002E05BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F484C625293F3A002E05BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F484CA25293F3B002E05BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F484CB25293F3B002E05BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F484E425293F3B002E05BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84F484E525293F3B002E05BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F484E725293F3B002E05BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Cavista/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.Cavista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F484E825293F3B002E05BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Cavista/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.Cavista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84F484EA25293F3B002E05BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CavistaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.CavistaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cavista.app/Cavista";
+			};
+			name = Debug;
+		};
+		84F484EB25293F3B002E05BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CavistaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.CavistaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cavista.app/Cavista";
+			};
+			name = Release;
+		};
+		84F484ED25293F3B002E05BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CavistaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.CavistaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cavista;
+			};
+			name = Debug;
+		};
+		84F484EE25293F3B002E05BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CavistaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gangadhar.CavistaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cavista;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F484B725293F3A002E05BA /* Build configuration list for PBXProject "Cavista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F484E425293F3B002E05BA /* Debug */,
+				84F484E525293F3B002E05BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F484E625293F3B002E05BA /* Build configuration list for PBXNativeTarget "Cavista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F484E725293F3B002E05BA /* Debug */,
+				84F484E825293F3B002E05BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F484E925293F3B002E05BA /* Build configuration list for PBXNativeTarget "CavistaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F484EA25293F3B002E05BA /* Debug */,
+				84F484EB25293F3B002E05BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F484EC25293F3B002E05BA /* Build configuration list for PBXNativeTarget "CavistaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F484ED25293F3B002E05BA /* Debug */,
+				84F484EE25293F3B002E05BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F484B425293F3A002E05BA /* Project object */;
+}
