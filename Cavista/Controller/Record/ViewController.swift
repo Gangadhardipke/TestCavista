@@ -10,6 +10,7 @@ import UIKit
 import Toast_Swift
 import SnapKit
 class ViewController: UIViewController {
+    
     private lazy var recordTableView: UITableView = {
         let recordTableView = UITableView()
         recordTableView.accessibilityIdentifier = "recordTableView"
@@ -24,12 +25,14 @@ class ViewController: UIViewController {
         recordTableView.tableFooterView = UIView()
         return recordTableView
     }()
+    
     private lazy var sortButton: UIBarButtonItem = {
         let sortButton = UIBarButtonItem (title: "Sort By", style: .plain, target: self, action: #selector(self.sortedPressed))
         sortButton.tintColor = UIColor.gray
         sortButton.accessibilityIdentifier = "sortButton"
         return sortButton
     }()
+    
     public var viewModel: CavistaViewModel! {
         didSet {
             viewModel.onFetchCompleted = {
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,6 +63,8 @@ class ViewController: UIViewController {
             recordTableView.leftAnchor.constraint(equalTo: view.leftAnchor)
         ])
     }
+    
+    //MARK: Sort button click
     @objc func sortedPressed() {
         let actionsheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         actionsheet.addAction(UIAlertAction(title: "All", style: UIAlertAction.Style.default, handler: { (action) -> Void in
@@ -89,6 +95,7 @@ class ViewController: UIViewController {
     
 }
 
+// MARK: Tableview delegate 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.recordList.count
