@@ -1,5 +1,5 @@
 //
-//  CavistaTableViewCell.swift
+//  RecordTableViewCell.swift
 //  Cavista
 //
 //  Created by Admin on 04/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-class CavistaTableViewCell: UITableViewCell, ReusableView  {
+class RecordTableViewCell: UITableViewCell, ReusableView  {
     
     private lazy var idLabel: UILabel = {
         let lastMessageDateLabel = UILabel()
@@ -95,32 +95,29 @@ class CavistaTableViewCell: UITableViewCell, ReusableView  {
     func configure(record: RecordModel){
         if recordContainerView.superview == nil {
             contentView.addSubview(self.recordContainerView)
+            self.recordContainerView.snp.makeConstraints({ (constraint) in
+                constraint.bottom.right.equalTo(self.contentView).offset(-8)
+                constraint.top.left.equalTo(self.contentView).offset(8)
+                constraint.centerY.equalTo(self.contentView)
+            })
             recordContainerView.addSubview(self.rightMiddleStackView)
+            self.rightMiddleStackView.snp.makeConstraints({ (constraint) in
+                constraint.right.equalTo(self.recordContainerView).offset(-8)
+                constraint.top.equalTo(self.recordContainerView).offset(4)
+                constraint.left.equalTo(self.recordContainerView).offset(8)
+                constraint.centerX.equalTo(self.recordContainerView)
+                constraint.height.greaterThanOrEqualTo(30)
+            })
             rightMiddleStackView.addArrangedSubview(self.idLabel)
             rightMiddleStackView.addArrangedSubview(self.dateLabel)
             recordContainerView.addSubview(self.typeLabel)
-            if record.type == .text{
-                recordContainerView.addSubview(self.descriptionLabel)
-            } else {
-                recordContainerView.addSubview(self.recordImageView)
-            }
-            NSLayoutConstraint.activate([
-                self.recordContainerView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-                self.recordContainerView.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: 4),
-                self.recordContainerView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8),
-                self.recordContainerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-                self.recordContainerView.leadingAnchor
-                    .constraint(equalTo: contentView.leadingAnchor, constant: 8),
-                self.rightMiddleStackView.topAnchor.constraint(equalTo: self.recordContainerView.topAnchor, constant: 4),
-                self.rightMiddleStackView.leadingAnchor.constraint(equalTo: self.recordContainerView.leadingAnchor, constant: 8),
-                self.rightMiddleStackView.centerXAnchor.constraint(equalTo: self.recordContainerView.centerXAnchor),
-                self.rightMiddleStackView.trailingAnchor.constraint(equalTo: self.recordContainerView.trailingAnchor, constant: -8),
-                self.rightMiddleStackView.heightAnchor.constraint(equalToConstant: 30),
-                self.typeLabel.leadingAnchor.constraint(equalTo: self.recordContainerView.leadingAnchor, constant: 8),
-                self.typeLabel.trailingAnchor.constraint(equalTo: self.recordContainerView.trailingAnchor, constant: -8),
-                self.typeLabel.topAnchor.constraint(equalTo: self.rightMiddleStackView.bottomAnchor, constant: 4),
-                self.typeLabel.heightAnchor.constraint(equalToConstant: 30),
-            ])
+            self.typeLabel.snp.makeConstraints({ (constraint) in
+                constraint.right.equalTo(self.recordContainerView).offset(-8)
+                constraint.left.equalTo(self.recordContainerView).offset(8)
+                constraint.top.equalTo(self.rightMiddleStackView.snp.bottom)
+                constraint.centerX.equalTo(self.recordContainerView)
+                constraint.height.lessThanOrEqualTo(30)
+            })
         }
         idLabel.text = record.id
         typeLabel.text = record.type.map { $0.rawValue }
@@ -130,21 +127,20 @@ class CavistaTableViewCell: UITableViewCell, ReusableView  {
         if record.type == .text {
             recordContainerView.addSubview(self.descriptionLabel)
             descriptionLabel.text = record.data
-            NSLayoutConstraint.activate([
-                self.descriptionLabel.topAnchor.constraint(equalTo: self.typeLabel.bottomAnchor, constant: 4),
-                self.descriptionLabel.leadingAnchor.constraint(equalTo: self.recordContainerView.leadingAnchor, constant: 8),
-                self.descriptionLabel.trailingAnchor.constraint(equalTo: self.recordContainerView.trailingAnchor, constant: -8),
-                self.descriptionLabel.bottomAnchor.constraint(equalTo: self.recordContainerView.bottomAnchor, constant: -4),
-            ])
+            self.descriptionLabel.snp.makeConstraints({ (constraint) in
+                constraint.top.equalTo(self.typeLabel.snp.bottom).offset(4)
+                constraint.bottom.right.equalTo(self.recordContainerView).offset(-8)
+                constraint.left.equalTo(self.recordContainerView).offset(8)
+            })
         } else {
             recordContainerView.addSubview(self.recordImageView)
-            NSLayoutConstraint.activate([
-                self.recordImageView.topAnchor.constraint(equalTo: self.typeLabel.bottomAnchor, constant: 4),
-                self.recordImageView.leadingAnchor.constraint(equalTo: self.recordContainerView.leadingAnchor, constant: 8),
-                self.recordImageView.trailingAnchor.constraint(equalTo: self.recordContainerView.trailingAnchor, constant: -8),
-                self.recordImageView.bottomAnchor.constraint(equalTo: self.recordContainerView.bottomAnchor, constant: -4),
-                self.recordImageView.heightAnchor.constraint(equalToConstant: 200),
-            ])
+            self.recordImageView.snp.makeConstraints({ (constraint) in
+                constraint.bottom.right.equalTo(self.recordContainerView).offset(-8)
+                constraint.left.equalTo(self.recordContainerView).offset(8)
+                constraint.top.equalTo(self.typeLabel.snp.bottom).offset(4)
+                constraint.height.greaterThanOrEqualTo(300)
+                constraint.height.lessThanOrEqualTo(300)
+            })
             recordImageView.configureImages(record: record)
         }
         self.layoutIfNeeded()

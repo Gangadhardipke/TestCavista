@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 class AvtarView: UIView {
     let viewModel = AvatarFetchManager()
     private lazy var recordImageView: UIImageView = {
@@ -16,8 +16,7 @@ class AvtarView: UIView {
         recordImageView.accessibilityIdentifier = "recordImageView"
         recordImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
         recordImageView.clipsToBounds = true
-        recordImageView.contentMode = .scaleAspectFill
-        recordImageView.contentMode = .scaleAspectFill
+        recordImageView.contentMode = .scaleToFill
         return recordImageView
     }()
 
@@ -33,17 +32,14 @@ class AvtarView: UIView {
 
     private func configureContents() {
         self.addSubview(self.recordImageView)
-        NSLayoutConstraint.activate([
-            self.recordImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            self.recordImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            self.recordImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.recordImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ])
+        self.recordImageView.snp.makeConstraints({ (constraint) in
+            constraint.top.bottom.left.right.equalTo(self)
+        })
     }
 
     public func configureImages(record: RecordModel) {
             DispatchQueue.main.async { [weak self] in
-                self?.viewModel.avatarRequests.append(self?.recordImageView.configureForUser(url: record.data!, recordService: self?.viewModel.recordService, completion: nil))
+                self?.recordImageView.af.setImage(withURL: URL(string: record.data!)!, cacheKey: nil, placeholderImage: UIImage(named: "defaultImage"))
             }
     }
 

@@ -20,10 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let vc = ViewController()
-            vc.viewModel = CavistaViewModel()
-            let nav = UINavigationController.init(rootViewController: vc)
-            window.rootViewController = nav
+            let viewController = ViewController()
+            viewController.viewModel = ViewModel()
+            let navigationController = UINavigationController.init(rootViewController: viewController)
+            window.rootViewController = navigationController
             self.window = window
             window.makeKeyAndVisible()
         }

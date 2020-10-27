@@ -8,12 +8,12 @@
 
 import Foundation
 public class RecordModel:Decodable{
-
-   enum CodingKeys: String, CodingKey {
-          case id
-          case type
-          case date
-          case data
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case type
+        case date
+        case data
     }
     
     var id: String
@@ -22,11 +22,11 @@ public class RecordModel:Decodable{
     var data: String?
     
     public required init(from decoder: Decoder) throws {
-          let container = try decoder.container(keyedBy: CodingKeys.self)
-          id = try container.decode(String.self, forKey: .id)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
         type = try container.decodeIfPresent(Type.self, forKey: .type)
-          data = try container.decodeIfPresent(String.self, forKey: .data) ?? ""
-          date = try container.decodeIfPresent(String.self, forKey: .date) ?? ""
+        data = try container.decodeIfPresent(String.self, forKey: .data) ?? ""
+        date = try container.decodeIfPresent(String.self, forKey: .date) ?? ""
     }
     public init(id: String, type: String, date: String, data: String){
         self.id = id

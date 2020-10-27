@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E74E9E2547992200381ACD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E74E9D2547992200381ACD /* DetailViewController.swift */; };
+		18E74EA62547993700381ACD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E74EA52547993700381ACD /* DetailViewModel.swift */; };
 		58DE4B2A58D60A2292930EC1 /* Pods_CavistaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2466A8890460CF2CCC0D10 /* Pods_CavistaTests.framework */; };
 		84F484C025293F3A002E05BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484BF25293F3A002E05BA /* AppDelegate.swift */; };
 		84F484C225293F3A002E05BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484C125293F3A002E05BA /* SceneDelegate.swift */; };
@@ -15,14 +17,14 @@
 		84F484CC25293F3B002E05BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F484CA25293F3B002E05BA /* LaunchScreen.storyboard */; };
 		84F484D725293F3B002E05BA /* CavistaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484D625293F3B002E05BA /* CavistaTests.swift */; };
 		84F484E225293F3B002E05BA /* CavistaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484E125293F3B002E05BA /* CavistaUITests.swift */; };
-		84F484F5252947FE002E05BA /* CavistaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F4252947FE002E05BA /* CavistaViewModel.swift */; };
-		84F484F7252949C8002E05BA /* CavistaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F6252949C8002E05BA /* CavistaTableViewCell.swift */; };
-		84F484F92529522D002E05BA /* CavistaNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F82529522D002E05BA /* CavistaNetworking.swift */; };
+		84F484F5252947FE002E05BA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F4252947FE002E05BA /* ViewModel.swift */; };
+		84F484F7252949C8002E05BA /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F6252949C8002E05BA /* RecordTableViewCell.swift */; };
+		84F484F92529522D002E05BA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484F82529522D002E05BA /* NetworkService.swift */; };
 		84F484FB2529525F002E05BA /* CavistaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F484FA2529525F002E05BA /* CavistaDatabase.swift */; };
 		84FD5773252B6183008FD4C9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5772252B6183008FD4C9 /* Constant.swift */; };
 		84FD5775252B6224008FD4C9 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5774252B6224008FD4C9 /* AlamofireManager.swift */; };
 		84FD5777252B63C1008FD4C9 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5776252B63C1008FD4C9 /* RecordModel.swift */; };
-		84FD5779252B6950008FD4C9 /* CavistaServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5778252B6950008FD4C9 /* CavistaServiceProvider.swift */; };
+		84FD5779252B6950008FD4C9 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD5778252B6950008FD4C9 /* NetworkServiceProvider.swift */; };
 		84FD577B252B7AC7008FD4C9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD577A252B7AC7008FD4C9 /* Extension.swift */; };
 		84FD577E252B9AA5008FD4C9 /* AvtarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD577D252B9AA5008FD4C9 /* AvtarView.swift */; };
 		84FD5780252B9C3D008FD4C9 /* AvatarFetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD577F252B9C3D008FD4C9 /* AvatarFetchManager.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E74E9D2547992200381ACD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18E74EA52547993700381ACD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		22FACE7B3DA04C74FBB165FE /* Pods-CavistaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CavistaTests.release.xcconfig"; path = "Target Support Files/Pods-CavistaTests/Pods-CavistaTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D6DDCE059E64989154F7F11 /* Pods_Cavista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cavista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C61C7903CCD2386EDE394E3 /* Pods-Cavista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cavista.debug.xcconfig"; path = "Target Support Files/Pods-Cavista/Pods-Cavista.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,14 +72,14 @@
 		84F484DD25293F3B002E05BA /* CavistaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CavistaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F484E125293F3B002E05BA /* CavistaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaUITests.swift; sourceTree = "<group>"; };
 		84F484E325293F3B002E05BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F484F4252947FE002E05BA /* CavistaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaViewModel.swift; sourceTree = "<group>"; };
-		84F484F6252949C8002E05BA /* CavistaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaTableViewCell.swift; sourceTree = "<group>"; };
-		84F484F82529522D002E05BA /* CavistaNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaNetworking.swift; sourceTree = "<group>"; };
+		84F484F4252947FE002E05BA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		84F484F6252949C8002E05BA /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		84F484F82529522D002E05BA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		84F484FA2529525F002E05BA /* CavistaDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaDatabase.swift; sourceTree = "<group>"; };
 		84FD5772252B6183008FD4C9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		84FD5774252B6224008FD4C9 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		84FD5776252B63C1008FD4C9 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
-		84FD5778252B6950008FD4C9 /* CavistaServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavistaServiceProvider.swift; sourceTree = "<group>"; };
+		84FD5778252B6950008FD4C9 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
 		84FD577A252B7AC7008FD4C9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84FD577D252B9AA5008FD4C9 /* AvtarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvtarView.swift; sourceTree = "<group>"; };
 		84FD577F252B9C3D008FD4C9 /* AvatarFetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarFetchManager.swift; sourceTree = "<group>"; };
@@ -115,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18E74E9C254798FA00381ACD /* Record Details */ = {
+			isa = PBXGroup;
+			children = (
+				18E74E9D2547992200381ACD /* DetailViewController.swift */,
+				18E74EA52547993700381ACD /* DetailViewModel.swift */,
+			);
+			path = "Record Details";
+			sourceTree = "<group>";
+		};
 		7F1FBBB0E3891D1A164E8B65 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,9 +203,9 @@
 		84F484EF252946AF002E05BA /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
-				84F484F82529522D002E05BA /* CavistaNetworking.swift */,
+				84F484F82529522D002E05BA /* NetworkService.swift */,
 				84FD5774252B6224008FD4C9 /* AlamofireManager.swift */,
-				84FD5778252B6950008FD4C9 /* CavistaServiceProvider.swift */,
+				84FD5778252B6950008FD4C9 /* NetworkServiceProvider.swift */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -216,7 +229,7 @@
 		84F484F2252947A8002E05BA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				84F484F6252949C8002E05BA /* CavistaTableViewCell.swift */,
+				84F484F6252949C8002E05BA /* RecordTableViewCell.swift */,
 				84FD5783252BD1D3008FD4C9 /* Main.storyboard */,
 			);
 			path = UI;
@@ -225,6 +238,7 @@
 		84F484F3252947BC002E05BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18E74E9C254798FA00381ACD /* Record Details */,
 				84FD577C252B9A58008FD4C9 /* Record */,
 			);
 			path = Controller;
@@ -244,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				84F484C325293F3A002E05BA /* ViewController.swift */,
-				84F484F4252947FE002E05BA /* CavistaViewModel.swift */,
+				84F484F4252947FE002E05BA /* ViewModel.swift */,
 				84FD577D252B9AA5008FD4C9 /* AvtarView.swift */,
 			);
 			path = Record;
@@ -328,7 +342,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Admin;
 				TargetAttributes = {
 					84F484BB25293F3A002E05BA = {
@@ -499,21 +513,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F484F5252947FE002E05BA /* CavistaViewModel.swift in Sources */,
+				18E74EA62547993700381ACD /* DetailViewModel.swift in Sources */,
+				84F484F5252947FE002E05BA /* ViewModel.swift in Sources */,
 				84FD5775252B6224008FD4C9 /* AlamofireManager.swift in Sources */,
 				84F484FB2529525F002E05BA /* CavistaDatabase.swift in Sources */,
 				84FD5780252B9C3D008FD4C9 /* AvatarFetchManager.swift in Sources */,
 				84FD577B252B7AC7008FD4C9 /* Extension.swift in Sources */,
 				84FD577E252B9AA5008FD4C9 /* AvtarView.swift in Sources */,
-				84F484F7252949C8002E05BA /* CavistaTableViewCell.swift in Sources */,
+				84F484F7252949C8002E05BA /* RecordTableViewCell.swift in Sources */,
+				18E74E9E2547992200381ACD /* DetailViewController.swift in Sources */,
 				84FD5786252BD49C008FD4C9 /* NavigationController.swift in Sources */,
 				84FD5773252B6183008FD4C9 /* Constant.swift in Sources */,
 				84F484C425293F3A002E05BA /* ViewController.swift in Sources */,
-				84F484F92529522D002E05BA /* CavistaNetworking.swift in Sources */,
+				84F484F92529522D002E05BA /* NetworkService.swift in Sources */,
 				84F484C025293F3A002E05BA /* AppDelegate.swift in Sources */,
 				84FD5777252B63C1008FD4C9 /* RecordModel.swift in Sources */,
 				84F484C225293F3A002E05BA /* SceneDelegate.swift in Sources */,
-				84FD5779252B6950008FD4C9 /* CavistaServiceProvider.swift in Sources */,
+				84FD5779252B6950008FD4C9 /* NetworkServiceProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +602,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -646,6 +663,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

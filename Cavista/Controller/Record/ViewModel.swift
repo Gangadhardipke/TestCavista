@@ -1,5 +1,5 @@
 //
-//  CavistaViewModel.swift
+//  ViewModel.swift
 //  Cavista
 //
 //  Created by Admin on 04/10/20.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-public class CavistaViewModel{
-    let cavistaService: CavistaServiceProvider
+public class ViewModel{
+    let networkService: NetworkServiceProvider
     let database: CavistaDatabase
-    var isSelected: Bool
     var isfilter: Bool
     var mainList: [RecordModel] = []
     public var recordList: [RecordModel] = []
@@ -19,21 +18,20 @@ public class CavistaViewModel{
     var onFetchFailed: ((_ reason: String) -> ())? = nil
     
     public convenience init() {
-        self.init(cavistaService: CavistaNetworking(), database:CavistaDatabase())
+        self.init(networkService: NetworkService(), database:CavistaDatabase())
     }
     
-    public init(cavistaService: CavistaServiceProvider, database: CavistaDatabase, recordList: [RecordModel] = [], isSelected: Bool = false, isfilter: Bool = false) {
-        self.cavistaService = cavistaService
+    public init(networkService: NetworkServiceProvider, database: CavistaDatabase, recordList: [RecordModel] = [], isfilter: Bool = false) {
+        self.networkService = networkService
         self.database = database
         self.recordList = recordList
-        self.isSelected = isSelected
         self.isfilter = isfilter
     }
     
     //MARK: Get the record from server and store into Realm
     public func fetchRecord() {
-        if cavistaService.isConnectedToInternet() {
-            cavistaService.fetchRecords(completion: { [weak self] (response) in
+        if networkService.isConnectedToInternet() {
+            networkService.fetchRecords(completion: { [weak self] (response) in
                 guard self != nil else { return }
                 switch response {
                 case .success(let response):

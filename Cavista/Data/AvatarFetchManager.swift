@@ -9,8 +9,8 @@
 import UIKit
 
 class AvatarFetchManager: NSObject {
-    var recordService: CavistaServiceProvider? {
-            return CavistaNetworking()
+    var recordService: NetworkServiceProvider? {
+            return NetworkService()
        }
 
        var avatarRequests: [CancalableRequest?] = []

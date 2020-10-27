@@ -1,5 +1,5 @@
 //
-//  CavistaNetworking.swift
+//  NetworkService.swift
 //  Cavista
 //
 //  Created by Admin on 04/10/20.
@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
-class CavistaNetworking: CavistaServiceProvider {
+class NetworkService: NetworkServiceProvider {
  
     @discardableResult
     public func fetchRecords(completion: @escaping (APIResponse<[RecordModel]>) -> Void) -> CancalableRequest {
@@ -18,10 +18,6 @@ class CavistaNetworking: CavistaServiceProvider {
             DispatchQueue.main.async {
                 switch response.result {
                 case .success:
-                    if let data = response.data {
-                        let rawResponse = String(data: data, encoding: .utf8)
-                        print(rawResponse as Any)
-                    }
                     if let data = response.data, let paginatedResponse = try? JSONDecoder().decode([RecordModel].self, from: data) {
                         completion(.success(paginatedResponse))
                     } else {

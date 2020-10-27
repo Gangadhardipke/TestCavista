@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         recordTableView.translatesAutoresizingMaskIntoConstraints = false
         recordTableView.rowHeight = UITableView.automaticDimension
         recordTableView.estimatedRowHeight = 60
-        recordTableView.registerCell(CavistaTableViewCell.self)
+        recordTableView.registerCell(RecordTableViewCell.self)
         recordTableView.separatorInset = UIEdgeInsets.zero
         recordTableView.tableFooterView = UIView()
         return recordTableView
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         return sortButton
     }()
     
-    public var viewModel: CavistaViewModel! {
+    public var viewModel: ViewModel! {
         didSet {
             viewModel.onFetchCompleted = {
                 self.view.hideToastActivity()
@@ -50,18 +50,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Records"
         self.view.addSubview(recordTableView)
+        self.recordTableView.snp.makeConstraints({ (constraint) in
+            constraint.top.bottom.left.right.equalTo(self.view)
+        })
         if viewModel.recordList.count == 0{
-            self.view.makeToast("Loading...")
+            self.view.makeToastActivity(.center)
             self.navigationItem.rightBarButtonItem = sortButton
             self.viewModel.fetchRecord()
         }
-        NSLayoutConstraint.activate([
-            recordTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            recordTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            recordTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            recordTableView.leftAnchor.constraint(equalTo: view.leftAnchor)
-        ])
+        
     }
     
     //MARK: Sort button click
@@ -102,8 +101,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CavistaTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.accessibilityIdentifier = "cavistaTableViewCell\(indexPath.row)"
+        let cell: RecordTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.accessibilityIdentifier = "recordTableViewCell\(indexPath.row)"
         let recordStream =  viewModel.recordList[indexPath.row]
         cell.selectionStyle = .none
         cell.configure(record: recordStream)
@@ -111,12 +110,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if viewModel.isSelected == false {
-            var list  = [RecordModel]()
-            list.append(self.viewModel.recordList[indexPath.row])
-            let vc = ViewController()
-            vc.viewModel = CavistaViewModel(cavistaService: CavistaNetworking(), database: CavistaDatabase(), recordList: list, isSelected: true)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let record = self.viewModel.recordList[indexPath.row]
+        let viewController = DetailViewController()
+        viewController.viewModel = DetailViewModel(record: record)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

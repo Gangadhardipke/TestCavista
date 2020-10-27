@@ -55,7 +55,7 @@ public extension NibLoadingView where Self: UIView{
 }
 
 public extension UIImageView {
-    func configureForUser(url: String, recordService: CavistaServiceProvider?, completion: ((_ response: Bool) -> Void)?) -> CancalableRequest? {
+    func configureForUser(url: String, recordService: NetworkServiceProvider?, completion: ((_ response: Bool) -> Void)?) -> CancalableRequest? {
         self.image = nil
         guard let userService = recordService else { return nil }
         return userService.fetchAvatar(url: url) { [weak self] response in
