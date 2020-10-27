@@ -40,7 +40,7 @@ public class ViewModel{
                         self?.recordList.append(contentsOf: response)
                         self?.database.addRecord(records: self?.recordList ?? [])
                     }
-                    self?.onFetchCompleted!()
+                    self?.onFetchCompleted?()
                 case .failure(let apiError):
                     self?.onFetchFailed?(apiError.localizedDescription)
                 }
@@ -54,7 +54,7 @@ public class ViewModel{
                 self.onFetchFailed?("Record not in local DB")
             }
             else{
-                self.onFetchCompleted!()
+                self.onFetchCompleted?()
             }
         }
     }
@@ -72,7 +72,7 @@ public class ViewModel{
                 }
             })
         }
-        self.onFetchCompleted!()
+        self.onFetchCompleted?()
     }
 }
 

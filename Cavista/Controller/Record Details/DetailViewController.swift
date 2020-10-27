@@ -109,14 +109,14 @@ class DetailViewController: UIViewController {
             constraint.centerX.equalTo(self.recordScrollView)
             constraint.height.lessThanOrEqualTo(30)
         })
-        self.idLabel.text = self.viewModel.record.id
-        self.typeLabel.text = self.viewModel.record.type.map { $0.rawValue }
-        self.dateLabel.text = self.viewModel.record.date
+        self.idLabel.text = self.viewModel.record?.id
+        self.typeLabel.text = self.viewModel.record?.type.map { $0.rawValue }
+        self.dateLabel.text = self.viewModel.record?.date
         self.recordImageView.removeFromSuperview()
         self.descriptionLabel.removeFromSuperview()
-        if self.viewModel.record.type == .text {
+        if self.viewModel.record?.type == .text {
             recordScrollView.addSubview(self.descriptionLabel)
-            descriptionLabel.text = self.viewModel.record.data
+            descriptionLabel.text = self.viewModel.record?.data
             self.descriptionLabel.snp.makeConstraints({ (constraint) in
                 constraint.top.equalTo(self.typeLabel.snp.bottom).offset(4)
                 constraint.bottom.right.equalTo(self.recordScrollView).offset(-8)
@@ -131,7 +131,9 @@ class DetailViewController: UIViewController {
                 constraint.height.greaterThanOrEqualTo(300)
                 constraint.height.lessThanOrEqualTo(300)
             })
-            recordImageView.configureImages(record: self.viewModel.record)
+            if let record = self.viewModel.record {
+            recordImageView.configureImages(record: record)
+            }
         }
     }
 }

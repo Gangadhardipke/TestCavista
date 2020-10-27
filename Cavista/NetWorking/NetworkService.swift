@@ -66,7 +66,7 @@ class NetworkService: NetworkServiceProvider {
     
     @discardableResult
     public func isConnectedToInternet() ->Bool {
-        return NetworkReachabilityManager()!.isReachable
+        return ((NetworkReachabilityManager()?.isReachable) != nil)
     }
 }
 

@@ -84,9 +84,9 @@ class CavistaTests: XCTestCase {
                  }
                }
         let record = realm.objects(Record.self).last
-        XCTAssertEqual(record!.id,"465")
-        XCTAssertEqual(record!.date,"01/05/1919")
-        XCTAssertEqual(record!.type, "text")
-        XCTAssertEqual(record!.data, "test data2")
+        XCTAssertEqual(record?.id,"465")
+        XCTAssertEqual(record?.date,"01/05/1919")
+        XCTAssertEqual(record?.type, "text")
+        XCTAssertEqual(record?.data, "test data2")
     }
 }

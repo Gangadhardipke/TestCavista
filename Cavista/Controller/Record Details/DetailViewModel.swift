@@ -8,13 +8,13 @@
 
 import Foundation
 class DetailViewModel{
-    var record: RecordModel
+    var record: RecordModel?
     
     public convenience init() {
         self.init(record:nil)
     }
     
     public init(record: RecordModel?) {
-        self.record = record!
+        self.record = record
     }
 }

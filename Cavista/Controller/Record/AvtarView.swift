@@ -38,9 +38,13 @@ class AvtarView: UIView {
     }
 
     public func configureImages(record: RecordModel) {
+        if let imageURL = URL(string: record.data ?? "") {
             DispatchQueue.main.async { [weak self] in
-                self?.recordImageView.af.setImage(withURL: URL(string: record.data!)!, cacheKey: nil, placeholderImage: UIImage(named: "defaultImage"))
+                self?.recordImageView.af.setImage(withURL: imageURL, cacheKey: nil, placeholderImage: UIImage(named: "defaultImage"))
             }
+        }else{
+            self.recordImageView.image = UIImage(named: "defaultImage")
+        }
     }
 
 }
